@@ -1,0 +1,48 @@
+# Ruff configuration - linting and formatting for the whole journey.
+# Replaces the old black + flake8 + isort trio with one fast tool.
+# Docs: https://docs.astral.sh/ruff/configuration/
+
+line-length = 100
+target-version = "py312"
+extend-exclude = [".venv", ".venv-torch", "data", "site"]
+
+# Lint notebooks too, so the code you write while learning is held to the
+# same standard as the code you write in scripts.
+extend-include = ["*.ipynb"]
+
+[lint]
+select = [
+  "E",    # pycodestyle errors
+  "W",    # pycodestyle warnings
+  "F",    # pyflakes - undefined names, unused imports
+  "I",    # isort - import ordering
+  "N",    # pep8-naming
+  "UP",   # pyupgrade - modern Python syntax
+  "B",    # bugbear - common real bugs
+  "SIM",  # simplify - code that can be simpler
+  "C4",   # comprehensions
+  "PTH",  # prefer pathlib over os.path
+  "RET",  # return consistency
+  "ARG",  # unused arguments
+  "RUF",  # ruff-specific rules
+]
+
+ignore = [
+  "E501",    # line length is the formatter's job
+  "RUF001",  # ambiguous unicode - fine in prose and comments
+  "RUF002",
+  "RUF003",
+  "B008",    # function call in default arg - normal for argparse/click
+  "PTH123",  # builtin open() is clearer than Path.open() in teaching code
+  "SIM108",  # ternary is not always clearer than if/else
+]
+
+[lint.per-file-ignores]
+# Notebooks legitimately redefine names across cells and set up state at import.
+"*.ipynb" = ["E402", "F811", "F841", "B018", "ERA001"]
+"__init__.py" = ["F401"]
+# Teaching scripts often print deliberately to show intermediate values.
+"scripts/*" = ["T201", "ERA001"]
+
+[format]
+docstring-code-format = true
