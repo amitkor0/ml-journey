@@ -46,3 +46,18 @@ ignore = [
 
 [format]
 docstring-code-format = true
+
+# Lint notes/ and code/, but do not reformat them.
+#
+# Two reasons. First, the code in code/ is teaching material: the trailing
+# comments are aligned into columns so the expected output lines up against
+# the code that produces it, and `ruff format` collapses every one of those to
+# a single space, destroying the alignment that carries the lesson. Second,
+# ruff also formats Python blocks embedded in Markdown, so the illustrative
+# snippets in notes/ would churn on every run for the same reason.
+#
+# The trade-off is that these two trees are not auto-formatted. That is the
+# right trade: in normal source files the formatter should win, and in
+# pedagogical files the readability should.
+exclude = ["notes/**", "code/**"]
+

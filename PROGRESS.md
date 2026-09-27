@@ -34,7 +34,7 @@ part-time.** Treat that as a range, not a deadline.
 
 | # | Module | Stage | Lessons | Notes | Notebook | Status |
 |---|---|---|---|---|---|---|
-| 00 | [Prerequisites](https://github.com/NabidAlam/road-to-machine-learning/tree/main/00-prerequisites) | 0 | — | `notes/00-prerequisites/` | `notebooks/00-prerequisites/` | not started |
+| 00 | [Prerequisites](https://github.com/NabidAlam/road-to-machine-learning/tree/main/00-prerequisites) | 0 | — | `notes/00-prerequisites/` | `code/00-prerequisites/` | **in progress** |
 | 01 | [Python for Data Science](https://github.com/NabidAlam/road-to-machine-learning/tree/main/01-python-for-data-science) | 1 | — | | | not started |
 | 19 | [SQL & Databases](https://github.com/NabidAlam/road-to-machine-learning/tree/main/19-sql-database-fundamentals) | 1.5 | — | | | not started |
 | 02 | [Introduction to ML](https://github.com/NabidAlam/road-to-machine-learning/tree/main/02-introduction-to-ml) | 2 | — | | | not started |
