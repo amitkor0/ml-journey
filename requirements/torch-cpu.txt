@@ -1,0 +1,43 @@
+# Deep learning environment (CPU) - Modules 09, 10, 11, 12, 25
+#
+# IMPORTANT: this machine has AMD integrated graphics, no NVIDIA GPU.
+# The default `torch` wheel for Windows on PyPI is CPU-only, which is what we
+# want. For heavy training (CNNs, transformers) use free cloud GPUs instead:
+#   - Google Colab  https://colab.research.google.com
+#   - Kaggle        https://www.kaggle.com/code
+#   - Lightning AI  https://lightning.ai  (free GPU hours)
+#
+# Install:
+#   uv venv --python 3.12 .venv-torch
+#   uv pip install --python .venv-torch\Scripts\python.exe -r requirements/torch-cpu.txt
+
+# --- Core DL frameworks ---
+torch>=2.4
+torchvision>=0.19
+torchaudio>=2.4
+
+# --- Keras / TensorFlow (Module 10) ---
+# TensorFlow on Windows is CPU-only. It is a large download (~600 MB) and is
+# NOT required to pass the curriculum. PyTorch alone is enough for 09-12 and 25.
+# tensorflow>=2.17        # uncomment only when you reach the Keras lessons
+# keras>=3.5
+
+# --- Transformers & NLP (Modules 12, 25) ---
+transformers>=4.44
+datasets>=2.21
+accelerate>=0.33
+tokenizers>=0.19
+huggingface-hub>=0.24
+sentencepiece>=0.2
+nltk>=3.8
+
+# --- Vision helpers (Module 11) ---
+opencv-python>=4.10
+pillow>=10.4
+
+# --- Experiment tracking (Module 14) ---
+tensorboard>=2.17
+
+# --- Evaluation / explainability for DL ---
+scikit-learn>=1.5
+matplotlib>=3.8

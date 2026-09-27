@@ -1,0 +1,44 @@
+# Normalise line endings in the repository, keep native endings on Windows.
+# Without this, Git rewrites LF to CRLF on checkout and every diff shows noise.
+
+* text=auto eol=lf
+
+# Windows-native scripts must keep CRLF or PowerShell misbehaves
+*.ps1 text eol=crlf
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Everything else stays LF
+*.py text eol=lf
+*.md text eol=lf
+*.txt text eol=lf
+*.json text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.toml text eol=lf
+*.csv text eol=lf
+*.ipynb text eol=lf
+*.cfg text eol=lf
+*.ini text eol=lf
+.gitignore text eol=lf
+.gitattributes text eol=lf
+
+# Binary - never touch
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.svg text eol=lf
+*.pdf binary
+*.zip binary
+*.gz binary
+*.whl binary
+*.parquet binary
+*.feather binary
+*.h5 binary
+*.pkl binary
+*.joblib binary
+*.onnx binary
+*.pt binary
+*.pth binary
+*.npy binary

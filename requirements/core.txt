@@ -1,0 +1,49 @@
+# Core environment - Stage 0 to Stage 4 + Modules 19, 20, 21
+# Covers: Python fundamentals, data wrangling, classical ML, SQL, imbalanced
+# data, explainability. Install with:
+#   uv pip install -r requirements/core.txt
+
+# --- Notebooks & interactive ---
+jupyterlab>=4.2
+ipykernel>=6.29
+nbformat>=5.10
+
+# --- Data wrangling & numerics ---
+numpy>=1.26
+pandas>=2.2
+pyarrow>=16.0
+openpyxl>=3.1
+
+# --- Statistics & maths ---
+scipy>=1.13
+statsmodels>=0.14
+
+# --- Visualisation ---
+matplotlib>=3.8
+seaborn>=0.13
+plotly>=5.22
+
+# --- Classical machine learning ---
+scikit-learn>=1.5
+xgboost>=2.1
+lightgbm>=4.5
+
+# --- Module 20: imbalanced data ---
+imbalanced-learn>=0.12
+
+# --- Module 21: explainability ---
+shap>=0.46
+lime>=0.2.0.1
+
+# --- Module 19: SQL & databases ---
+sqlalchemy>=2.0
+
+# --- Scraping & data sources ---
+requests>=2.32
+beautifulsoup4>=4.12
+lxml>=5.2
+tqdm>=4.66
+
+# --- Tooling ---
+ruff>=0.6
+pytest>=8.3
